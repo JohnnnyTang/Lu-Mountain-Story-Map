@@ -1,0 +1,239 @@
+body { 
+    margin: 0; 
+    padding: 0; 
+    display: flex;
+}
+
+#map { 
+    position: fixed; 
+    top: 0; bottom: 0; 
+    width: 75%;
+}
+
+.title-bg {
+    overflow: hidden;
+    position: absolute;
+    margin-left: 75%;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 26.5%;
+    background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Fback_origin_min_pic%2F19%2F04%2F16%2Fcda8207e279851e4bd73afca6d5a577b.jpg%21%2Ffw%2F750%2Fquality%2F99%2Funsharp%2Ftrue%2Fcompress%2Ftrue&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625985366&t=f37aafb5502f21b04595e24d6451910b);
+}
+
+.libai-bg {
+    position: absolute;
+    overflow: hidden;
+    margin-left: 95.8%;
+    top: 11.3%;
+    width: 60px;
+    height: 108px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    transition: 100ms all ease;
+}
+
+.libai-bg[playbg] {
+    background-image: url(https://z3.ax1x.com/2021/06/11/2fMs91.png);
+}
+
+.libai-bg[pausebg] {
+    background-image: url(https://z3.ax1x.com/2021/06/11/2fGObV.png);
+}
+
+.map-overlay {
+    position: fixed;
+    top: 20px;
+    right: 5px;
+    background: rgba(255, 255, 255, 0);
+    margin-right: 2%;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+}
+
+button {
+    padding: 0;
+    background-color: transparent;
+    box-sizing: border-box;
+    transition: 100ms all ease;
+    cursor: pointer;
+}
+.play {
+    height: 60px;
+    border-style: solid;
+    border-width: 30px 0 30px 48px;
+    border-color: transparent transparent transparent rgba(159, 120, 103, 0.9);
+    transition: all .5s ease;
+}
+.pause {
+    width: 60px;
+    height: 60px;
+    border-style: double;
+    border-width: 0px 0px 0px 48px;
+    border-color: rgba(207, 98, 51, 0.8);
+}
+.play:hover {
+    border-color: transparent transparent transparent rgb(207, 186, 177);
+}
+.pause:hover {
+    border-color: transparent transparent transparent rgba(230, 174, 150, 1);
+}
+
+#features {
+    width: 25%;
+    margin-left: 75%;
+    font-family: sans-serif;
+
+    background-color: #fafafa;
+}
+
+h2 {
+    margin-top: 50px;
+    width: 100%;
+    font-size: 30px;
+    font-family: 'SimSun';
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    color: #1d1d1f;
+}
+
+.mask {
+  height: 212px;
+  position: relative;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+
+.mask span {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 212px;
+
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-color: rgb(53, 53, 53);
+
+  font-family: 'KaiTi';
+}
+
+.mask span[data-show] {
+  transform: translateY(-200px);
+  transition: .5s transform ease-in-out;
+}
+
+.mask span[data-up] {
+  transform: translateY(-400px);
+  transition: .5s transform ease-in-out;
+}
+
+.mask a {
+    background-size: 100% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.mask span a[mount] {
+    background-image: linear-gradient(45deg, #dfa065 50%, #af6901);
+}
+
+.mask span a[cliff] {
+    background-image: linear-gradient(45deg, #f4fd78 50%, #dde025);
+}
+
+.mask span a[river] {
+    background-image: linear-gradient(45deg, #76b3f8 50%, #0983e6);
+}
+
+.mask span a[view] {
+    background-image: linear-gradient(45deg, #fcc09d 50%, #fd9292);
+}
+
+.mask span a[song] {
+    background-image: linear-gradient(45deg, #63e23d 50%, #037508);
+}
+
+a[result] {
+    font-size: 70%;
+    background-color: rgb(216, 49, 49);
+}
+
+section {
+    padding: 25px 50px;
+    line-height: 25px;
+    border-bottom: 1px solid #ddd;
+    opacity: 0.25;
+    font-size: 13px;
+}
+
+section:first-child {
+    border-bottom: 3px solid rgb(155, 155, 155);
+    margin-top: 10px;
+    opacity: 0.65;
+    font-family: "Microsoft YaHei";
+    font-size: 150%;
+}
+
+.map-title h2 {
+    margin-top: 25px;
+    width: 100%;
+    font-size: 30px;
+    font-family: 'SimSun';
+    font-weight: bold;
+    line-height: 1.06;
+    letter-spacing: -0.02em;
+    color: #1d1d1f;
+}
+
+.map-title span {
+    font-family: "KaiTi";
+    font-size: 130%;
+    color: rgb(49, 49, 49);
+}
+
+section.active {
+    opacity: 1;
+}
+
+section:last-child {
+    border-bottom: 3px solid rgb(155, 155, 155);
+    margin-bottom: 300px;
+}
+
+.legend {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8);
+    margin-right: 26%;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+    border-radius: 3px;
+}
+
+#legend {
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    line-height: 18px;
+    height: 150px;
+    margin-bottom: 20px;
+    width: 92px;
+    overflow: scroll;
+}
+
+.legend-key {
+    display: inline-block;
+    border-radius: 20%;
+    width: 10px;
+    height: 15px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
