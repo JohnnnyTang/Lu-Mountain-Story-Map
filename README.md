@@ -15,3 +15,7 @@ Libai and Lu mountain story map
 1.  NNU Academy of Geography providing the basic data
 2.  1807 team providing the analysis result
 3.  self-made webpage
+
+#### Web Pages
+Already Turn on GitHub Pages service
+view this webpage on https://johnnnytang.github.io/Lu-Mountain-Story-Map/
