@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <title>李白与庐山故事地图</title>
+</head>
+<body>
+    <div id="map"></div>
+    <div class="title-bg"></div>
+    <div class="libai-bg" playbg id="libaibg"></div>
+    <div id="features">
+        <section class="map-title">
+            <h2>故事地图</h2>
+            <span>&emsp;&emsp;&emsp;李白与庐山</span>
+            <p></p>
+        </section>
+        <section id="wulaofeng" class="active">
+            <h2>
+                登庐山五老峰
+                <div class="mask">
+                    <span data-show id="above">
+                        庐山东南五老峰，<br>青天削出金芙蓉。<br>
+                        九江秀色可揽结，<br>吾将此地巢云松。<br>
+                    </span>
+                    <span id="wulaofeng">
+                        庐山东南
+                        <a mount>五老峰</a><a>，</a>                
+                        <a illustration><br><br>此句与诗题说明李白诗中描绘之景是在庐山五老峰处所见</a>
+                    </span>
+                    <span id="jingfurong">
+                        青天
+                        <a cliff>削</a>
+                        出金芙蓉，
+                        <a illustration><br><br>此句写五老峰耸立如青天削出，说明其所在位置地形起伏度大</a>
+                    </span>
+                    <span id="kelanjie">
+                        <a river>九江</a>
+                        秀色
+                        <a view>可揽结</a><a>，</a>
+                        <a illustration><br><br>李白在山顶上总览九江的秀丽景色，即其位置可视域包含九江市</a>
+                    </span>
+                    <span id="songshu">
+                        吾将此地巢云
+                        <a song>松</a><a>，</a>
+                        <a illustration><br><br>此句说明李白所在位置处或附近有松树的分布</a>
+                    </span>
+                </div>
+            </h2>
+        </section>
+        <section id="pubu">
+            <h2>
+                望庐山瀑布
+                <div class="mask">
+                    <span data-show id="above">
+                        日照香炉生紫烟，<br>遥看瀑布挂前川。<br>
+                        飞流直下三千尺，<br>疑是银河落九天。<br>
+                    </span>
+                    <span id="rizhao">
+                        <a sun>日照</a>
+                        <a mount>香炉</a>
+                        生紫烟，
+                        <a illustration><br><br>此句说明李白位置在香炉峰日照强度较大的区域</a>
+                    </span>
+                    <span id="seepubu">
+                        遥看
+                        <a river>瀑布</a>
+                        挂前川，
+                        <a illustration><br><br>此句说明李白远距离观赏了庐山瀑布</a>
+                    </span>
+                    <span id="zhixia">
+                        飞流
+                        <a cliff>直下三千尺</a><a>，</a>
+                        <a illustration><br><br>此句说明李白能够看到瀑布位置的地形起伏度大</a>
+                    </span>
+                    <span id="nothing">疑是银河落九天。</span>
+                </div>
+            </h2>
+        </section>
+        <section id="about">
+            <p>Supported By NNU GIS Team1807</p>
+            <p>Designed By Johnny Tang</p>
+            <p>Author email addr: johnnytang00@163.com</p>
+        </section>
+    </div>
+    <div class='map-overlay'>
+        <button class="play" id="ctrButton" title="Click to follow Libai"></button>
+    </div>
+    <div class='legend' id='legend'></div>
+    <script src="scripts/main.js" type="text/javascript"></script>
+</body>
+</html>
